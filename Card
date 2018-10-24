@@ -1,0 +1,20 @@
+class Card extends React.Component{
+  render(){
+    return(
+      <div>
+      Nome: {this.props.user.name}
+        <br/>
+      Level: {this.props.user.idade}     
+        <br/>
+       <img className="img" src={this.props.user.avatar}/>
+      </div>
+    );
+  }
+}
+
+const user = {name: 'Yargo', idade: 25, avatar: 'https://images.vexels.com/media/users/3/140750/isolated/preview/c9b1b66ee3fc60f9bb0aa9a5bee63a9f-male-avatar-perfil-2-by-vexels.png'}
+
+ReactDOM.render(
+<Card user={user} />,
+document.getElementById('root'));
+
